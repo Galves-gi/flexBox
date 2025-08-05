@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/conf-padrao.css">
+    <link rel="shortcut icon" href="/assts/favicon.png" type="image/x-icon">
+    <title>CSS - FlexBox</title>
+</head>
+
+<body>
+    <!-- cabeçalho -->
+    <header class="flexivel_coluna-centro">
+        <figure class="logo">
+            <img src="/assts/logo.png" alt="logo com simbolo do css e no lado escrito flexbox na cor azul neon"
+                class="logo_img">
+        </figure>
+        <nav>
+            <ul class="flexivel_linha-centro">
+                <li class="menu_link"><a href="index.html">Introdução</a></li>
+                <li class="menu_link"><a href="/pages/container.html">Container</a></li>
+                <li class="menu_link"><a href="/pages/item-flex.html">Itens Flex</a></li>
+                <li class="menu_link"><a href="/pages/desafio.html">Desafio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- conteudo -->
+    <main>
+        <!-- navegação lateral -->
+        <aside>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#definicao" class="subtitulo_tres">Definição do Flexbox</a>
+                    </li>
+                    <li>
+                        <a href="#criado" class="subtitulo_tres">Por que foi criado?</a>
+                    </li>
+                    <li>
+                        <a href="#vantagem" class="subtitulo_tres">Vantagens</a>
+                    </li>
+                    <li>
+                        <a href="#limitacao" class="subtitulo_tres">Limitações</a>
+                    </li>
+                    <li>
+                        <a href="#conceito" class="subtitulo_tres">Conceito de eixos</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <!-- texto -->
+        <div>
+            <section>
+                <!-- introdução -->
+                <h1 class="titulo" id="definicao">
+                    Definição do Flexbox
+                </h1>
+                <p>
+                    Flexbox é a abreviação de Flexible Box Layout, um módulo introduzido no CSS3 para facilitar a
+                    criação de
+                    layouts mais eficientes, flexíveis e responsivos. Ele permite distribuir e alinhar elementos dentro
+                    de
+                    um container pai, mesmo quando o tamanho desses elementos é desconhecido ou variável.
+
+                    Com Flexbox, é possível organizar os itens em linha ou em coluna, controlando facilmente o
+                    espaçamento,
+                    a ordem e o alinhamento dos elementos — sem depender de float ou position, que eram técnicas comuns,
+                    mas
+                    mais limitadas e complexas.
+                </p>
+            </section>
+            <section>
+                <!-- motivo da criação do flexbox -->
+                <h2 class="subtitulo" id="criado">Por que foi criado?</h2>
+                <p>
+
+
+                    Antes do Flexbox, criar layouts com alinhamentos verticais, espaçamentos proporcionais ou
+                    distribuição
+                    dinâmica exigia técnicas complicadas, como float, inline-block ou uso excessivo de margens.
+                    O Flexbox foi criado para simplificar esse processo e resolver problemas comuns de alinhamento,
+                    principalmente em layouts menores
+                </p>
+            </section>
+            <section>
+                <!-- vantagens do flexbox -->
+                <h2 class="subtitulo" id="vantagem">Vantagens</h2>
+                <p>
+                    O layout de caixa flexível (Flexbox) do CSS oferece diversas vantagens que tornam a criação de
+                    layouts
+                    muito mais prática e eficiente. Com ele, é possível centralizar verticalmente um bloco de conteúdo
+                    dentro de seu elemento pai com facilidade — algo que antes exigia soluções complexas. Além disso, o
+                    Flexbox permite que todos os elementos filhos de um container ocupem igualmente o espaço disponível,
+                    tanto em largura quanto em altura, mesmo que o tamanho do container seja dinâmico. Outra vantagem
+                    importante é a capacidade de fazer com que colunas em um layout de múltiplas colunas tenham a mesma
+                    altura, mesmo quando cada uma delas contém quantidades diferentes de conteúdo, garantindo assim um
+                    visual mais harmônico e alinhado.
+                </p>
+            </section>
+            <section>
+                <!-- limitações do flexbox-->
+                <h3 class="subtitulo" id="limitacao">Limitações</h3>
+                <p>
+                    O Flexbox possui algumas limitações naturais devido ao seu modelo de funcionamento unidimensional.
+                    Isso
+                    significa que ele organiza os elementos em apenas um eixo por vez — seja no eixo horizontal, quando
+                    usamos flex-direction: row, ou no eixo vertical, ao aplicar flex-direction: column. Ele não foi
+                    projetado para lidar com linhas e colunas simultaneamente.
+                    <br> <br>
+                    Por isso, quando o layout exige a organização de elementos em linhas e colunas ao mesmo tempo — como
+                    em
+                    uma grade de página completa, com header, sidebar e conteúdo central — o Flexbox não é a ferramenta
+                    mais
+                    indicada. Nesses casos, o mais apropriado é o CSS Grid, que funciona de forma bidimensional e
+                    oferece
+                    mais controle sobre áreas complexas.
+                    <br> <br>
+                    Em resumo, o Flexbox foi pensado para resolver problemas locais de alinhamento e distribuição de
+                    espaço
+                    entre itens que estão dispostos em uma única direção, sendo ideal para componentes, menus, cards e
+                    seções simples dentro de uma página.
+                </p>
+            </section>
+            <section>
+                <!-- conceito de eixos -->
+                <h2 class="subtitulo" id="conceito">Conceito de eixos</h2>
+                <figure class=" flexivel_linha-centro">
+                    <img src="/assts/termologia flex.png" alt="">
+                    <figcaption></figcaption>
+                </figure>
+                <p>
+                    <br> <br>
+                    No Flexbox, os elementos são organizados ao longo de dois eixos: o eixo principal (main axis) e o
+                    eixo
+                    cruzado (cross axis). O eixo principal é o caminho ao longo do qual os itens são distribuídos. Por
+                    padrão, ele é horizontal, ou seja, vai da esquerda para a direita, como definido pela propriedade
+                    flex-direction: row. No entanto, é possível alterar essa direção para vertical usando
+                    flex-direction:
+                    column.
+                    <br> <br>
+                    O alinhamento dos itens ao longo do eixo principal é controlado pela propriedade justify-content,
+                    que
+                    permite distribuir o espaço entre os elementos de diversas formas — como centralizado, alinhado ao
+                    início ou ao fim, ou com espaçamento uniforme.
+                    <br> <br>
+                    Já o eixo cruzado (cross axis) é sempre perpendicular ao eixo principal. Se o eixo principal estiver
+                    na
+                    horizontal (linha), o eixo cruzado será vertical (coluna). Se o principal for vertical, o cruzado
+                    será
+                    horizontal. O alinhamento dos itens nesse eixo perpendicular é feito com align-items (para todos os
+                    itens) ou align-self (para um item específico).
+                    <br> <br>
+                    No Flexbox, o elemento pai que recebe a propriedade display: flex é chamado de container flexível
+                    (flex
+                    container), e os elementos filhos que são organizados dentro dele são chamados de itens flexíveis
+                    (flex
+                    items).
+                    <br> <br>
+                    🔍 Dica didática:
+                    <br>
+                    Pense assim: o main axis organiza os itens, e o cross axis alinha os itens no outro lado.
+                </p>
+            </section>
+            <!-- video do yt -->
+            <article class="flexivel_coluna-centro espaco">
+                <h2 class="subtitulo">Recomendação de video</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/QJu4nQpsBa4?si=vko0p1OpJfDENhic"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </article>
+        </div>
+    </main>
+    <!-- rodape -->
+    <footer class="flexivel_linha-centro ">
+        <h5>
+            &reg Todos os direitos reservados.
+        </h5>
+    </footer>
+</body>
+
+</html>
