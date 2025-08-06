@@ -65,7 +65,10 @@ body {
 ul {
     list-style: none;
 }
-
+li{
+    margin: 0;
+    padding: 0;
+}
 a {
     text-decoration: none;
 }
@@ -87,23 +90,6 @@ a {
     justify-content: center;
     align-items: center;
 }
-pre {
-    text-align: center;
-    background-color:var(--cor-suporte) ;
-    padding: 1rem;
-    border-radius: 6px;
-}
-code {
-    background-color:var(--cor-suporte);
-    color: #00B4D8;
-    font-family: 'Courier New', monospace;
-}
-
-
-
-
-
-
 /* cabeçalho */
 header {
     background-color: var(--cor-primaria);
@@ -115,7 +101,7 @@ header {
 header nav ul {
     color: var(--cor-destaque);
     width: 60vw;
-    gap: 10%;
+    gap: 10rem;
 }
 
 header nav ul li a {
@@ -136,7 +122,7 @@ main {
 
 /* aside */
 aside {
-    width: 65vw;
+    max-width: 65vw;
     height: 100vh;
     padding: 3% 2%;
     background-color: var(--cor-suporte);
@@ -155,7 +141,12 @@ aside nav ul li a {
     color: var(--cor-branco);
 }
 
+aside nav ul li a:hover {
+    color: var(--cor-destaque);
+}
+
 section {
+    max-width: 65vw;
     height: auto;
     padding: 0 15rem 2rem 3rem;
 }

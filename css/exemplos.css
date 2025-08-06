@@ -1,34 +1,170 @@
 .pai {
-    display: flex;
-    gap: 10px;
-    padding: 10px;
-    border-radius: 20px;
-    border: 3px solid var(--cor-destaque);
-    background-color: var(--cor-primaria);
-    height: 30vh;
+  display: flex;
+
+  padding: 10px;
+  border-radius: 20px;
+  border: 3px solid var(--cor-destaque);
+  background-color: var(--cor-primaria);
+  min-height: 30vh;
 }
 
 .filho {
-    background-color: var(--cor-destaque);
-    color: var(--cor-primaria);
-    padding: 2rem;
-    width: 10%;
-    height: 10%;
-    text-align: center;
+  background-color: var(--cor-destaque);
+  color: var(--cor-primaria);
+  font-size: 1.8rem;
+  padding: 2rem;
+  margin: 1px;
+  min-width: 10%;
+
+  text-align: center;
 }
 
 .row {
-    flex-direction: row;
+  flex-direction: row;
 }
 
 .row-reverse {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .column {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .column-reverse {
-    flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.center {
+  justify-content: center;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
+}
+
+
+.items-stretch {
+  align-items: stretch;
+}
+
+.items-flex-start {
+  align-items: flex-start;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-flex-end {
+  align-items: flex-end;
+}
+
+.items-baseline {
+  align-items: baseline;
+}
+
+
+.align-content-flex-start {
+  align-content: flex-start;
+}
+
+.align-content-flex-end {
+  align-content: flex-end;
+}
+
+.align-content-center {
+  align-content: center;
+}
+
+.align-content-space-between {
+  align-content: space-between;
+}
+
+.align-content-space-around {
+  align-content: space-around;
+}
+
+.align-content-space-evenly {
+  align-content: space-evenly;
+}
+
+.align-content-stretch {
+  align-content: stretch;
+}
+
+.gap {
+  gap: 20px;
+}
+
+.row-gap {
+  row-gap: 10px;
+}
+
+.column-gap {
+  column-gap: 15px;
+}
+
+.flex-grow {
+  flex-grow: 2;
+}
+
+.flex-shrink {
+  flex-shrink: 2;
+}
+
+.flex-basis {
+  flex-basis: 400px;
+}
+
+.flex {
+  flex: 1 1 100px;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+.align-self-baseline {
+  align-self: baseline;
+}
+
+.align-self-stretch {
+  align-self: stretch;
+}
+
+.order-3 {
+  order: 1;
 }

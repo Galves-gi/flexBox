@@ -10,8 +10,9 @@
         href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/css/conf-padrao.css">
+    <link rel="stylesheet" href="/css/exemplos.css">
     <link rel="shortcut icon" href="/assts/favicon.png" type="image/x-icon">
-    <title>CSS - FlexBox</title>
+    <title>FlexBox - Item Flex</title>
 </head>
 
 <body>
@@ -23,10 +24,10 @@
         </figure>
         <nav>
             <ul class="flexivel_linha-centro">
-                <li class="menu_link"><a href="">Introdução</a></li>
-                <li class="menu_link"><a href="">Container</a></li>
-                <li class="menu_link"><a href="">Itens Flex</a></li>
-                <li class="menu_link"><a href="">Desafio</a></li>
+                <li class="menu_link"><a href="/index.html">Introdução</a></li>
+                <li class="menu_link"><a href="/pages/container.html">Container</a></li>
+                <li class="menu_link"><a href="/pages/item-flex.html">Itens Flex</a></li>
+                <li class="menu_link"><a href="/pages/desafio.html">Desafio</a></li>
             </ul>
         </nav>
     </header>
@@ -37,140 +38,192 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="#definicao" class="subtitulo_tres">Definição do Flexbox</a>
+                        <a href="#itensflex" class="subtitulo_tres">Itens flex</a>
                     </li>
                     <li>
-                        <a href="#criado" class="subtitulo_tres">Por que foi criado?</a>
+                        <a href="#flexgrow" class="subtitulo_tres">flex-grow</a>
                     </li>
                     <li>
-                        <a href="#vantagem" class="subtitulo_tres">Vantagens</a>
+                        <a href="#flexshrink" class="subtitulo_tres">flex-shrink</a>
                     </li>
                     <li>
-                        <a href="#limitacao" class="subtitulo_tres">Limitações</a>
+                        <a href="#flexbasis" class="subtitulo_tres">flex-basis</a>
                     </li>
                     <li>
-                        <a href="#conceito" class="subtitulo_tres">Conceito de eixos</a>
+                        <a href="#flex" class="subtitulo_tres">flex</a>
+                    </li>
+                    <li>
+                        <a href="#alignself" class="subtitulo_tres">align-self</a>
+                    </li>
+                    <li>
+                        <a href="#order" class="subtitulo_tres">order</a>
                     </li>
                 </ul>
+
             </nav>
         </aside>
         <!-- texto -->
         <div>
             <section>
                 <!-- introdução -->
-                <h1 class="titulo" id="definicao">
-                    Definição do Flexbox
+                <h1 class="titulo" id="itensflex">
+                    Itens Flex
                 </h1>
                 <p>
-                    Flexbox é a abreviação de Flexible Box Layout, um módulo introduzido no CSS3 para facilitar a
-                    criação de
-                    layouts mais eficientes, flexíveis e responsivos. Ele permite distribuir e alinhar elementos dentro
-                    de
-                    um container pai, mesmo quando o tamanho desses elementos é desconhecido ou variável.
-
-                    Com Flexbox, é possível organizar os itens em linha ou em coluna, controlando facilmente o
-                    espaçamento,
-                    a ordem e o alinhamento dos elementos — sem depender de float ou position, que eram técnicas comuns,
-                    mas
-                    mais limitadas e complexas.
+                    Quando você aplica display: flex em um elemento pai, todos os seus filhos diretos se tornam itens
+                    flexíveis. Isso significa que esses elementos passam a obedecer ao modelo Flexbox e podem ser
+                    organizados, alinhados e redimensionados dinamicamente, de acordo com o espaço disponível no
+                    contêiner.
                 </p>
-            </section>
-            <section>
-                <!-- motivo da criação do flexbox -->
-                <h2 class="subtitulo" id="criado">Por que foi criado?</h2>
-                <p>
-
-
-                    Antes do Flexbox, criar layouts com alinhamentos verticais, espaçamentos proporcionais ou
-                    distribuição
-                    dinâmica exigia técnicas complicadas, como float, inline-block ou uso excessivo de margens.
-                    O Flexbox foi criado para simplificar esse processo e resolver problemas comuns de alinhamento,
-                    principalmente em layouts menores
-                </p>
-            </section>
-            <section>
-                <!-- vantagens do flexbox -->
-                <h2 class="subtitulo" id="vantagem">Vantagens</h2>
-                <p>
-                    O layout de caixa flexível (Flexbox) do CSS oferece diversas vantagens que tornam a criação de
-                    layouts
-                    muito mais prática e eficiente. Com ele, é possível centralizar verticalmente um bloco de conteúdo
-                    dentro de seu elemento pai com facilidade — algo que antes exigia soluções complexas. Além disso, o
-                    Flexbox permite que todos os elementos filhos de um container ocupem igualmente o espaço disponível,
-                    tanto em largura quanto em altura, mesmo que o tamanho do container seja dinâmico. Outra vantagem
-                    importante é a capacidade de fazer com que colunas em um layout de múltiplas colunas tenham a mesma
-                    altura, mesmo quando cada uma delas contém quantidades diferentes de conteúdo, garantindo assim um
-                    visual mais harmônico e alinhado.
-                </p>
-            </section>
-            <section>
-                <!-- limitações do flexbox-->
-                <h3 class="subtitulo" id="limitacao">Limitações</h3>
-                <p>
-                    O Flexbox possui algumas limitações naturais devido ao seu modelo de funcionamento unidimensional.
-                    Isso
-                    significa que ele organiza os elementos em apenas um eixo por vez — seja no eixo horizontal, quando
-                    usamos flex-direction: row, ou no eixo vertical, ao aplicar flex-direction: column. Ele não foi
-                    projetado para lidar com linhas e colunas simultaneamente.
-                    <br> <br>
-                    Por isso, quando o layout exige a organização de elementos em linhas e colunas ao mesmo tempo — como
-                    em
-                    uma grade de página completa, com header, sidebar e conteúdo central — o Flexbox não é a ferramenta
-                    mais
-                    indicada. Nesses casos, o mais apropriado é o CSS Grid, que funciona de forma bidimensional e
-                    oferece
-                    mais controle sobre áreas complexas.
-                    <br> <br>
-                    Em resumo, o Flexbox foi pensado para resolver problemas locais de alinhamento e distribuição de
-                    espaço
-                    entre itens que estão dispostos em uma única direção, sendo ideal para componentes, menus, cards e
-                    seções simples dentro de uma página.
-                </p>
-            </section>
-            <section>
-                <!-- conceito de eixos -->
-                <h2 class="subtitulo" id="conceito">Conceito de eixos</h2>
-                <figure class=" flexivel_linha-centro">
-                    <img src="/assts/termologia flex.png" alt="">
-                    <figcaption></figcaption>
+                <figure class="flexivel_linha-centro espaco">
+                    <img src="/assts/imagem de codigo/filho.png" alt="">
                 </figure>
+            </section>
+            <!-- flex grow -->
+            <section>
+                <h2 class="subtitulo" id="flexgrow">Flex-grow</h2>
                 <p>
-                    <br> <br>
-                    No Flexbox, os elementos são organizados ao longo de dois eixos: o eixo principal (main axis) e o
-                    eixo
-                    cruzado (cross axis). O eixo principal é o caminho ao longo do qual os itens são distribuídos. Por
-                    padrão, ele é horizontal, ou seja, vai da esquerda para a direita, como definido pela propriedade
-                    flex-direction: row. No entanto, é possível alterar essa direção para vertical usando
-                    flex-direction:
-                    column.
-                    <br> <br>
-                    O alinhamento dos itens ao longo do eixo principal é controlado pela propriedade justify-content,
-                    que
-                    permite distribuir o espaço entre os elementos de diversas formas — como centralizado, alinhado ao
-                    início ou ao fim, ou com espaçamento uniforme.
-                    <br> <br>
-                    Já o eixo cruzado (cross axis) é sempre perpendicular ao eixo principal. Se o eixo principal estiver
-                    na
-                    horizontal (linha), o eixo cruzado será vertical (coluna). Se o principal for vertical, o cruzado
-                    será
-                    horizontal. O alinhamento dos itens nesse eixo perpendicular é feito com align-items (para todos os
-                    itens) ou align-self (para um item específico).
-                    <br> <br>
-                    No Flexbox, o elemento pai que recebe a propriedade display: flex é chamado de container flexível
-                    (flex
-                    container), e os elementos filhos que são organizados dentro dele são chamados de itens flexíveis
-                    (flex
-                    items).
-                    <br> <br>
-                    🔍 Dica didática:
-                    <br>
-                    Pense assim: o main axis organiza os itens, e o cross axis alinha os itens no outro lado.
+                    Controla quanto o item pode crescer em relação aos demais para ocupar o espaço extra no container.
                 </p>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    flex-grow: 2; <br> Faz o itens 2 crescer até ocupar o espaço disponível.
+                </p>
+                <div class="pai row ">
+                    <div class="filho">1</div>
+                    <div class="filho flex-grow">2</div>
+                    <div class="filho">3</div>
+                </div>
+            </section>
+            <!-- flex shrink -->
+            <section>
+                <h2 class="subtitulo" id="flexshrink">Flex-shrink</h2>
+                <p>
+                    Controla quanto o item pode encolher quando não há espaço suficiente no container.
+                </p>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    flex-shrink: 2; <br> Permite que os item encolha 2x quando o espaço for reduzido.
+                </p>
+                <div class="pai row flex-shrink">
+                    <div class="filho">1</div>
+                    <div class="filho flex-shrink">2</div>
+                    <div class="filho">3</div>
+                </div>
+            </section>
+            <!-- flex basis -->
+            <section>
+                <h2 class="subtitulo" id="flexbasis">Flex-basis</h2>
+                <p>
+                    Define o tamanho inicial do item antes de aplicar o grow ou shrink.
+                </p>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    flex-basis: 100px; <br> Vai Definir o tamanho inicial do item 2 antes de crescer ou encolher.
+                </p>
+                <div class="pai row ">
+                    <div class="filho">1</div>
+                    <div class="filho flex-basis">2</div>
+                    <div class="filho">3</div>
+                </div>
+            </section>
+            <!-- flex -->
+            <section>
+                <h2 class="subtitulo" id="flex">Flex</h2>
+                <p>
+                    Atalho que combina flex-grow, flex-shrink e flex-basis.
+                </p>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    flex: 1 1 100px; <br> Atalho para definir crescimento, encolhimento e tamanho base.
+                </p>
+                <div class="pai row">
+                    <div class="filho flex">1</div>
+                    <div class="filho flex">2</div>
+                    <div class="filho flex">3</div>
+                </div>
+            </section>
+            <!-- algn self-->
+            <section>
+                <h2 class="subtitulo" id="alignself">Align-Self</h2>
+                <p>
+                    A propriedade align-self serve para alinhar individualmente um item dentro de um contêiner flexível.
+                    Em vez de alinhar todos os itens dentro de um contêiner com a propriedade align-items, você pode
+                    usar align-self para definir o alinhamento de um único item de forma independente dos outros.
+                </p>
+                <figure class="flexivel_linha-centro espaco">
+                    <img src="/assts/imagem de codigo/align-self.png" alt="">
+                </figure>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    align-self: flex-start; <br> Alinha o item no início do eixo cruzado.
+                </p>
+                <div class="pai wrap ">
+                    <div class="filho">1</div>
+                    <div class="filho align-self-flex-start">2</div>
+                    <div class="filho">3</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    align-self: flex-end; <br> Alinha o item no final do eixo cruzado.
+                </p>
+                <div class="pai wrap ">
+                    <div class="filho">1</div>
+                    <div class="filho align-self-flex-end">2</div>
+                    <div class="filho">3</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    align-self: center; <br> Alinha o item no centro do eixo cruzado.
+                </p>
+                <div class="pai wrap ">
+                    <div class="filho">1</div>
+                    <div class="filho align-self-center">2</div>
+                    <div class="filho">3</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    align-self: baseline; <br> Alinha o item ao longo da linha de base do texto.
+                </p>
+                <div class="pai wrap ">
+                    <div class="filho">1</div>
+                    <div class="filho align-self-baseline" style="font-size: 24px;">Maior</div>
+                    <div class="filho">Texto</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    align-self: stretch; <br> Faz o item ocupar todo o espaço disponível no eixo cruzado.
+                </p>
+                <div class="pai wrap ">
+                    <div class="filho">1</div>
+                    <div class="filho align-self-stretch">2</div>
+                    <div class="filho">3</div>
+                </div>
+
+            </section>
+
+            <!-- order -->
+            <section>
+                <h2 class="subtitulo" id="order">Order</h2>
+                <p>
+                    Controla a ordem dos itens dentro do container flexível.
+                </p>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    order: 1; <br> Em tese, o item 2 tem que aparecer em primeiro, porém por padrão todos começam em
+                    ZERO. Por isso, ele vai para o ultimo lugar.
+                </p>
+                <div class="pai row">
+                    <div class="filho">1</div>
+                    <div class="filho order-3">2</div>
+                    <div class="filho">3</div>
+                </div>
+
             </section>
             <!-- video do yt -->
             <article class="flexivel_coluna-centro espaco">
                 <h2 class="subtitulo">Recomendação de video</h2>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/QJu4nQpsBa4?si=vko0p1OpJfDENhic"
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/phWxA89Dy94?si=UTFmKJv7UdpyR8FA"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
