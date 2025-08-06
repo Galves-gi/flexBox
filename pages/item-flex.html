@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/conf-padrao.css">
+    <link rel="stylesheet" href="/css/exemplos.css">
+    <link rel="shortcut icon" href="/assts/favicon.png" type="image/x-icon">
+    <title>FlexBox - Item Flex</title>
+</head>
+
+<body>
+    <!-- cabeçalho -->
+    <header class="flexivel_coluna-centro">
+        <figure class="logo">
+            <img src="/assts/logo.png" alt="logo com simbolo do css e no lado escrito flexbox na cor azul neon"
+                class="logo_img">
+        </figure>
+        <nav>
+            <ul class="flexivel_linha-centro">
+                <li class="menu_link"><a href="/index.html">Introdução</a></li>
+                <li class="menu_link"><a href="/pages/container.html">Container</a></li>
+                <li class="menu_link"><a href="/pages/item-flex.html">Itens Flex</a></li>
+                <li class="menu_link"><a href="/pages/desafio.html">Desafio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- conteudo -->
+    <main>
+        <!-- navegação lateral -->
+        <aside>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#itensflex" class="subtitulo_tres">Itens flex</a>
+                    </li>
+                    <li>
+                        <a href="#flexgrow" class="subtitulo_tres">flex-grow</a>
+                    </li>
+                    <li>
+                        <a href="#flexshrink" class="subtitulo_tres">flex-shrink</a>
+                    </li>
+                    <li>
+                        <a href="#flexbasis" class="subtitulo_tres">flex-basis</a>
+                    </li>
+                    <li>
+                        <a href="#flex" class="subtitulo_tres">flex</a>
+                    </li>
+                    <li>
+                        <a href="#alignself" class="subtitulo_tres">align-self</a>
+                    </li>
+                    <li>
+                        <a href="#order" class="subtitulo_tres">order</a>
+                    </li>
+                </ul>
+
+            </nav>
+        </aside>
+        <!-- texto -->
+        <div>
+            <section>
+                <!-- introdução -->
+                <h1 class="titulo" id="itensflex">
+                    Itens Flex
+                </h1>
+                <p>
+                    Quando você aplica display: flex em um elemento pai, todos os seus filhos diretos se tornam itens
+                    flexíveis. Isso significa que esses elementos passam a obedecer ao modelo Flexbox e podem ser
+                    organizados, alinhados e redimensionados dinamicamente, de acordo com o espaço disponível no
+                    contêiner.
+                </p>
+                <figure class="flexivel_linha-centro espaco">
+                    <img src="/assts/imagem de codigo/filho.png" alt="">
+                </figure>
+            </section>
+            <!-- flex grow -->
+            <section>
+                <h2 class="subtitulo" id="flexgrow">Flex-grow</h2>
+                <p>
+                    Controla quanto o item pode crescer em relação aos demais para ocupar o espaço extra no container.
+                </p>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    flex-grow: 2; <br> Faz o itens 2 crescer até ocupar o espaço disponível.
+                </p>
+                <div class="pai row ">
+                    <div class="filho">1</div>
+                    <div class="filho flex-grow">2</div>
+                    <div class="filho">3</div>
+                </div>
+            </section>
+            <!-- flex shrink -->
+            <section>
+                <h2 class="subtitulo" id="flexshrink">Flex-shrink</h2>
+                <p>
+                    Controla quanto o item pode encolher quando não há espaço suficiente no container.
+                </p>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    flex-shrink: 2; <br> Permite que os item encolha 2x quando o espaço for reduzido.
+                </p>
+                <div class="pai row flex-shrink">
+                    <div class="filho">1</div>
+                    <div class="filho flex-shrink">2</div>
+                    <div class="filho">3</div>
+                </div>
+            </section>
+            <!-- flex basis -->
+            <section>
+                <h2 class="subtitulo" id="flexbasis">Flex-basis</h2>
+                <p>
+                    Define o tamanho inicial do item antes de aplicar o grow ou shrink.
+                </p>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    flex-basis: 100px; <br> Vai Definir o tamanho inicial do item 2 antes de crescer ou encolher.
+                </p>
+                <div class="pai row ">
+                    <div class="filho">1</div>
+                    <div class="filho flex-basis">2</div>
+                    <div class="filho">3</div>
+                </div>
+            </section>
+            <!-- flex -->
+            <section>
+                <h2 class="subtitulo" id="flex">Flex</h2>
+                <p>
+                    Atalho que combina flex-grow, flex-shrink e flex-basis.
+                </p>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    flex: 1 1 100px; <br> Atalho para definir crescimento, encolhimento e tamanho base.
+                </p>
+                <div class="pai row">
+                    <div class="filho flex">1</div>
+                    <div class="filho flex">2</div>
+                    <div class="filho flex">3</div>
+                </div>
+            </section>
+            <!-- algn self-->
+            <section>
+                <h2 class="subtitulo" id="alignself">Align-Self</h2>
+                <p>
+                    A propriedade align-self serve para alinhar individualmente um item dentro de um contêiner flexível.
+                    Em vez de alinhar todos os itens dentro de um contêiner com a propriedade align-items, você pode
+                    usar align-self para definir o alinhamento de um único item de forma independente dos outros.
+                </p>
+                <figure class="flexivel_linha-centro espaco">
+                    <img src="/assts/imagem de codigo/align-self.png" alt="">
+                </figure>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    align-self: flex-start; <br> Alinha o item no início do eixo cruzado.
+                </p>
+                <div class="pai wrap ">
+                    <div class="filho">1</div>
+                    <div class="filho align-self-flex-start">2</div>
+                    <div class="filho">3</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    align-self: flex-end; <br> Alinha o item no final do eixo cruzado.
+                </p>
+                <div class="pai wrap ">
+                    <div class="filho">1</div>
+                    <div class="filho align-self-flex-end">2</div>
+                    <div class="filho">3</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    align-self: center; <br> Alinha o item no centro do eixo cruzado.
+                </p>
+                <div class="pai wrap ">
+                    <div class="filho">1</div>
+                    <div class="filho align-self-center">2</div>
+                    <div class="filho">3</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    align-self: baseline; <br> Alinha o item ao longo da linha de base do texto.
+                </p>
+                <div class="pai wrap ">
+                    <div class="filho">1</div>
+                    <div class="filho align-self-baseline" style="font-size: 24px;">Maior</div>
+                    <div class="filho">Texto</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    align-self: stretch; <br> Faz o item ocupar todo o espaço disponível no eixo cruzado.
+                </p>
+                <div class="pai wrap ">
+                    <div class="filho">1</div>
+                    <div class="filho align-self-stretch">2</div>
+                    <div class="filho">3</div>
+                </div>
+
+            </section>
+
+            <!-- order -->
+            <section>
+                <h2 class="subtitulo" id="order">Order</h2>
+                <p>
+                    Controla a ordem dos itens dentro do container flexível.
+                </p>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    order: 1; <br> Em tese, o item 2 tem que aparecer em primeiro, porém por padrão todos começam em
+                    ZERO. Por isso, ele vai para o ultimo lugar.
+                </p>
+                <div class="pai row">
+                    <div class="filho">1</div>
+                    <div class="filho order-3">2</div>
+                    <div class="filho">3</div>
+                </div>
+
+            </section>
+            <!-- video do yt -->
+            <article class="flexivel_coluna-centro espaco">
+                <h2 class="subtitulo">Recomendação de video</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/phWxA89Dy94?si=UTFmKJv7UdpyR8FA"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </article>
+        </div>
+    </main>
+    <footer class="flexivel_linha-centro ">
+        <h5>
+            &reg Todos os direitos reservados.
+        </h5>
+    </footer>
+</body>
+
+</html>

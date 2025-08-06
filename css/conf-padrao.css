@@ -1,0 +1,164 @@
+:root {
+    /* cores */
+    --cor-primaria: #000000;
+    /* Header - base forte, dominante */
+    --cor-secundaria: #434242;
+    /* Fundo principal - neutra e de apoio */
+    --cor-destaque: #00B4D8;
+    /* Cor de ação - botões, links, elementos chamativos */
+    --cor-suporte: #181818;
+    /* Aside ou menus laterais - suporte visual */
+    --cor-contraste: #343333;
+    /* Para dividir, destacar ou dar profundidade */
+    --cor-branco: #ffffff;
+}
+
+/* tipografia */
+.titulo,
+.subtitulo,
+.subtitulo_tres {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    color: var(--cor-branco);
+}
+
+.titulo {
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3rem);
+    padding: 3rem 0;
+}
+
+.subtitulo {
+    font-weight: 500;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    padding: 3rem 0;
+}
+
+.subtitulo_tres {
+    font-weight: 400;
+    font-size: clamp(1.25rem, 3.5vw, 1.5rem);
+    padding: 3rem 0;
+}
+
+.texto,
+p {
+    font-family: "Cardo", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    text-align: justify;
+    color: var(--cor-branco);
+}
+
+/* geral */
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+}
+
+ul {
+    list-style: none;
+}
+li{
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+
+.espaco {
+    padding: 3rem 0;
+}
+
+/* estilo padrao da pagina */
+.flexivel_linha-centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexivel_coluna-centro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* cabeçalho */
+header {
+    background-color: var(--cor-primaria);
+    padding: 2rem 0;
+    /*     position: sticky;
+    top: 0; */
+}
+
+header nav ul {
+    color: var(--cor-destaque);
+    width: 60vw;
+    gap: 10rem;
+}
+
+header nav ul li a {
+    color: var(--cor-destaque);
+    font-family: "Inter", sans-serif;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    transition: border-bottom 0.3s ease;
+}
+
+header nav ul li a:hover {
+    font-weight: bold;
+    border-bottom: 3px solid var(--cor-destaque);
+}
+
+main {
+    display: flex;
+}
+
+/* aside */
+aside {
+    max-width: 65vw;
+    height: 100vh;
+    padding: 3% 2%;
+    background-color: var(--cor-suporte);
+    position: sticky;
+    top: 0;
+    /*  z-index: -1; */
+}
+
+aside nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+aside nav ul li a {
+    color: var(--cor-branco);
+}
+
+aside nav ul li a:hover {
+    color: var(--cor-destaque);
+}
+
+section {
+    max-width: 65vw;
+    height: auto;
+    padding: 0 15rem 2rem 3rem;
+}
+
+article {
+    background-color: var(--cor-contraste);
+}
+
+/* rodape */
+footer {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    padding: 1%;
+    font-size: 1.5rem;
+}

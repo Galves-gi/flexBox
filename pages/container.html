@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/conf-padrao.css">
+    <link rel="stylesheet" href="/css/exemplos.css">
+    <link rel="shortcut icon" href="/assts/favicon.png" type="image/x-icon">
+    <title>FlexBox - Container</title>
+</head>
+
+<body>
+    <!-- cabeçalho -->
+    <header class="flexivel_coluna-centro">
+        <figure class="logo">
+            <img src="/assts/logo.png" alt="logo com simbolo do css e no lado escrito flexbox na cor azul neon"
+                class="logo_img">
+        </figure>
+        <nav>
+            <ul class="flexivel_linha-centro">
+                <li class="menu_link"><a href="index.html">Introdução</a></li>
+                <li class="menu_link"><a href="/pages/container.html">Container</a></li>
+                <li class="menu_link"><a href="/pages/item-flex.html">Itens Flex</a></li>
+                <li class="menu_link"><a href="/pages/desafio.html">Desafio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- conteudo -->
+    <main>
+        <!-- navegação lateral -->
+        <aside>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#displayflex" class="subtitulo_tres">Display flex</a>
+                    </li>
+                    <li>
+                        <a href="#flexdirection" class="subtitulo_tres">Flex-direction</a>
+                    </li>
+                    <li>
+                        <a href="#flexwrap" class="subtitulo_tres">Flex-wrap</a>
+                    </li>
+                    <li>
+                        <a href="#flexflow" class="subtitulo_tres">Flex-flow</a>
+                    </li>
+                    <li>
+                        <a href="#justifycontent" class="subtitulo_tres">Justify-content</a>
+                    </li>
+                    <li>
+                        <a href="#alignitems" class="subtitulo_tres">Align-items</a>
+                    </li>
+                    <li>
+                        <a href="#aligncontent" class="subtitulo_tres">Align-content</a>
+                    </li>
+                    <li>
+                        <a href="#gap" class="subtitulo_tres">Gap</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <!-- texto -->
+        <div>
+            <section>
+                <!-- introdução de container -->
+                <h1 class="titulo" id="displayflex">
+                    Definição do Flexbox
+                </h1>
+                <!-- texto -->
+                <p>
+                    No Flexbox, tudo começa quando você aplica a propriedade no css:
+                </p>
+                <figure class="flexivel_linha-centro espaco">
+                    <img src="/assts/imagem de codigo/display-flex.png" alt="">
+                </figure>
+                <p>
+                    Essa propriedade transforma o elemento pai em um flex container, e todos os elementos filhos diretos
+                    dele passam a ser itens flexíveis. A partir daí, você pode controlar posição, alinhamento e
+                    espaçamento desses itens com as propriedades do Flexbox.
+                    <br><br>
+                    💡 Exemplo prático
+                    Para usar Flexbox, o primeiro passo é definir um contêiner com display: flex. Vamos usar uma classe
+                    chamada .pai como contêiner, e colocar três elementos dentro dele, que serão os filhos:
+                </p>
+                <figure class="flexivel_linha-centro espaco">
+                    <img src="/assts/imagem de codigo/container-pai.png" alt="">
+                </figure>
+
+                <p>
+                    No CSS, ativamos o Flexbox assim:
+                </p>
+                <figure class="flexivel_linha-centro espaco">
+                    <img src="/assts/imagem de codigo/pai-display.png" alt="">
+                </figure>
+                <p>
+                    A partir desse ponto, o elemento .pai se torna um flex container, e os .filho passam a ser itens
+                    flexíveis. Agora você poderá aplicar todas as outras propriedades do Flexbox para controlar o
+                    layout,
+                    como flex-direction, justify-content, align-items, entre outras.
+                    <br><br>
+                    Esse exemplo será a base para os próximos tópicos e demonstrações.
+                </p>
+            </section>
+            <!-- Flex-direction -->
+            <section>
+                <h2 class="subtitulo" id="flexdirection">Flex-direction</h2>
+                <p>
+                    Controla em qual direção os itens filhos serão dispostos:
+                </p>
+                <figure class="flexivel_linha-centro espaco">
+                    <img src="/assts/imagem de codigo/flex direction.png" alt="">
+                </figure>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    Flex-direction: row; (padrão)<br>
+                    Em linha, da esquerda para a direita
+                </p>
+                <div class="pai row">
+                    <div class="filho">1</div>
+                    <div class="filho">2</div>
+                    <div class="filho">3</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    Flex-direction: row-reverse<br>
+                    Em linha, da direita para a esquerda
+                </p>
+                <div class="pai row-reverse">
+                    <div class="filho">1</div>
+                    <div class="filho">2</div>
+                    <div class="filho">3</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    Flex-direction: column <br>
+                    Em coluna, de cima para baixo
+                </p>
+                <div class="pai column">
+                    <div class="filho">1</div>
+                    <div class="filho">2</div>
+                    <div class="filho">3</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    Flex-direction: column-reverse<br>
+                    Em coluna, de baixo para cima
+                </p>
+                <div class="pai column-reverse">
+                    <div class="filho">1</div>
+                    <div class="filho">2</div>
+                    <div class="filho">3</div>
+                </div>
+            </section>
+            <!-- Flex-wrap -->
+            <section>
+                <h2 class="subtitulo" id="flexwrap">Flex-wrap</h2>
+                <p>
+                    Define se os itens podem ou não quebrar de linha quando não couberem no container:
+                </p>
+                <figure class="flexivel_linha-centro espaco">
+                    <img src="/assts/imagem de codigo/wrap.png" alt="">
+                </figure>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    flex-wrap: nowrap; (padrão)<br>
+                    Itens ficam em uma única linha
+                </p>
+                <div class="pai row">
+                    <div class="filho">1</div>
+                    <div class="filho">2</div>
+                    <div class="filho">3</div>
+                    <div class="filho">4</div>
+                    <div class="filho">5</div>
+                    <div class="filho">6</div>
+                    <div class="filho">7</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    flex-wrap: wrap;<br>
+                    Itens quebram para a próxima linha.
+                </p>
+                <div class="pai row wrap">
+                    <div class="filho">1</div>
+                    <div class="filho">2</div>
+                    <div class="filho">3</div>
+                    <div class="filho">4</div>
+                    <div class="filho">5</div>
+                    <div class="filho">6</div>
+                    <div class="filho">7</div>
+                    <div class="filho">8</div>
+                    <div class="filho">9</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    flex-wrap: wrap-reverse; <br>
+                    Itens quebram e reverte a ordem.
+                </p>
+                <div class="pai row wrap-reverse">
+                    <div class="filho">1</div>
+                    <div class="filho">2</div>
+                    <div class="filho">3</div>
+                    <div class="filho">4</div>
+                    <div class="filho">5</div>
+                    <div class="filho">6</div>
+                    <div class="filho">7</div>
+                    <div class="filho">8</div>
+                    <div class="filho">9</div>
+                </div>
+            </section>
+            <!-- Flex-flow -->
+            <section>
+                <h2 class="subtitulo" id="flexflow">Flex-flow</h2>
+                <p>
+                    É uma forma abreviada (shorthand) de usar flex-direction e flex-wrap juntos:
+                </p>
+                <figure class="flexivel_linha-centro espaco">
+                    <img src="/assts/imagem de codigo/flex-flow.png" alt="">
+                </figure>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    flex-flow: (row | colunm ) ( no-wrap | wrap | wrap-reverse)
+                </p>
+                <div class="pai row">
+                    <div class="filho">1</div>
+                    <div class="filho">2</div>
+                    <div class="filho">3</div>
+                </div>
+            </section>
+            <!--justify-content  -->
+            <section>
+                <h2 class="subtitulo" id="justifycontent">Justify-content</h2>
+                <p>
+                    Controla o alinhamento dos itens no eixo principal, ou seja, a distribuição dos itens ao longo do
+                    container:
+                </p>
+                <figure class="flexivel_linha-centro espaco">
+                    <img src="/assts/imagem de codigo/justify content.png" alt="">
+                </figure>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    justify-content: flex-start;
+                </p>
+                <div class="pai row flex-start">
+                    <div class="filho">1</div>
+                    <div class="filho">2</div>
+                    <div class="filho">3</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    justify-content: center;
+                </p>
+                <div class="pai row center">
+                    <div class="filho">1</div>
+                    <div class="filho">2</div>
+                    <div class="filho">3</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    justify-content: flex-end;
+                </p>
+                <div class="pai row flex-end">
+                    <div class="filho">1</div>
+                    <div class="filho">2</div>
+                    <div class="filho">3</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    justify-content: space-between;<br>
+                    Exiba os itens flexíveis com espaço entre as linhas:
+                </p>
+                <div class="pai row space-between">
+                    <div class="filho">1</div>
+                    <div class="filho">2</div>
+                    <div class="filho">3</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    justify-content: space-around;<br>
+                    Exiba os itens flexíveis com espaço antes, entre e depois das linhas:
+                </p>
+                <div class="pai row space-around">
+                    <div class="filho">1</div>
+                    <div class="filho">2</div>
+                    <div class="filho">3</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    justify-content: space-evenly;<br>
+                </p>
+                <div class="pai row space-evenly">
+                    <div class="filho">1</div>
+                    <div class="filho">2</div>
+                    <div class="filho">3</div>
+                </div>
+            </section>
+            <!-- align-items -->
+            <section>
+                <h2 class="subtitulo" id="alignitems">align-items</h2>
+                <p>
+                    Controla o alinhamento dos itens no eixo perpendicular ao principal (cross axis):
+                </p>
+                <figure class="flexivel_linha-centro espaco">
+                    <img src="/assts/imagem de codigo/align.png" alt="">
+                </figure>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    align-items: stretch; <br> Estica os itens para preencher o eixo cruzado (padrão).
+                </p>
+                <div class="pai row stretch">
+                    <div class="filho">1</div>
+                    <div class="filho">2</div>
+                    <div class="filho">3</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    align-items: flex-start; <br> Alinha ao início do eixo cruzado.
+                </p>
+                <div class="pai row items-flex-start">
+                    <div class="filho">1</div>
+                    <div class="filho">2</div>
+                    <div class="filho">3</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    align-items: center; <br> Alinha ao centro.
+                </p>
+                <div class="pai row items-center">
+                    <div class="filho">1</div>
+                    <div class="filho">2</div>
+                    <div class="filho">3</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    align-items: flex-end; <br> Alinha ao final.
+                </p>
+                <div class="pai row items-flex-end">
+                    <div class="filho">1</div>
+                    <div class="filho">2</div>
+                    <div class="filho">3</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    align-items: baseline; <br> Alinha as linhas de base do texto.
+                </p>
+                <div class="pai row items-baseline">
+                    <div class="filho">Texto</div>
+                    <div class="filho" style="font-size: 3rem;">Maior</div>
+                    <div class="filho">Texto</div>
+                </div>
+            </section>
+            <!-- align-content  -->
+            <section>
+                <h2 class="subtitulo" id="aligncontent ">align-content</h2>
+                <p>
+                    Só funciona quando há mais de uma linha de itens (com flex-wrap: wrap ativado).
+                    Controla o alinhamento do grupo de linhas (não dos itens individualmente):
+                </p>
+                <figure class="flexivel_linha-centro espaco">
+                    <img src="/assts/imagem de codigo/align-content.png" alt="">
+                </figure>
+                <!-- exemplo -->
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    align-content: flex-start; <br> Linhas no topo.
+                </p>
+                <div class="pai wrap align-content-flex-start">
+                    <div class="filho">1</div>
+                    <div class="filho">2</div>
+                    <div class="filho">3</div>
+                    <div class="filho">4</div>
+                    <div class="filho">5</div>
+                    <div class="filho">6</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    align-content: flex-end; <br> Linhas no final.
+                </p>
+                <div class="pai wrap align-content-flex-end">
+                    <div class="filho">1</div>
+                    <div class="filho">2</div>
+                    <div class="filho">3</div>
+                    <div class="filho">4</div>
+                    <div class="filho">5</div>
+                    <div class="filho">6</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    align-content: center; <br> Linhas centralizadas.
+                </p>
+                <div class="pai wrap align-content-center">
+                    <div class="filho">1</div>
+                    <div class="filho">2</div>
+                    <div class="filho">3</div>
+                    <div class="filho">4</div>
+                    <div class="filho">5</div>
+                    <div class="filho">6</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    align-content: space-between; <br> Espaço entre as linhas.
+                </p>
+                <div class="pai wrap align-content-space-between">
+                    <div class="filho">1</div>
+                    <div class="filho">2</div>
+                    <div class="filho">3</div>
+                    <div class="filho">4</div>
+                    <div class="filho">5</div>
+                    <div class="filho">6</div>
+                    <div class="filho">7</div>
+                    <div class="filho">8</div>
+                    <div class="filho">9</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    align-content: space-around; <br> Espaço ao redor das linhas.
+                </p>
+                <div class="pai wrap align-content-space-around">
+                    <div class="filho">1</div>
+                    <div class="filho">2</div>
+                    <div class="filho">3</div>
+                    <div class="filho">4</div>
+                    <div class="filho">5</div>
+                    <div class="filho">6</div>
+                    <div class="filho">7</div>
+                    <div class="filho">8</div>
+                    <div class="filho">9</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    align-content: space-evenly; <br> Espaçamento totalmente igual.
+                </p>
+                <div class="pai wrap align-content-space-evenly">
+                    <div class="filho">1</div>
+                    <div class="filho">2</div>
+                    <div class="filho">3</div>
+                    <div class="filho">4</div>
+                    <div class="filho">5</div>
+                    <div class="filho">6</div>
+                    <div class="filho">7</div>
+                    <div class="filho">8</div>
+                    <div class="filho">9</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    align-content: stretch; <br> Ocupa todo o espaço vertical disponível.
+                </p>
+                <div class="pai wrap align-content-stretch">
+                    <div class="filho">1</div>
+                    <div class="filho">2</div>
+                    <div class="filho">3</div>
+                    <div class="filho">4</div>
+                    <div class="filho">5</div>
+                    <div class="filho">6</div>
+                </div>
+
+
+
+            </section>
+            <!-- gap -->
+            <section>
+                <h2 class="subtitulo" id="gap">Gap</h2>
+                <p>
+                    Controla o espaço entre os itens, sem precisar usar margens:
+                </p>
+                <figure class="flexivel_linha-centro espaco">
+                    <img src="/assts/imagem de codigo/gap.png" alt="">
+                </figure>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    gap: 20px; <br> Espaçamento de 20px tanto na horizontal quanto na vertical.
+                </p>
+                <div class="pai row gap">
+                    <div class="filho">1</div>
+                    <div class="filho">2</div>
+                    <div class="filho">3</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    row-gap: 10px; <br> Espaço de 10px entre as linhas (vertical).
+                </p>
+                <div class="pai row wrap row-gap">
+                    <div class="filho">1</div>
+                    <div class="filho">2</div>
+                    <div class="filho">3</div>
+                    <div class="filho">4</div>
+                    <div class="filho">5</div>
+                    <div class="filho">6</div>
+                    <div class="filho">7</div>
+                    <div class="filho">8</div>
+                </div>
+                <!-- exemplo -->
+                <p class="subtitulo_tres">
+                    column-gap: 15px; <br> Espaço de 15px entre as colunas (horizontal).
+                </p>
+                <div class="pai row wrap column-gap">
+                    <div class="filho">1</div>
+                    <div class="filho">2</div>
+                    <div class="filho">3</div>
+                    <div class="filho">4</div>
+                    <div class="filho">5</div>
+                </div>
+            </section>
+            <!-- video do yt -->
+            <article class="flexivel_coluna-centro espaco">
+                <h2 class="subtitulo">Recomendação de video</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KbjLtEgmZ_E?si=y5wf9T8LEwcpfuok"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </article>
+        </div>
+    </main>
+    <footer class="flexivel_linha-centro ">
+        <h5>
+            &reg Todos os direitos reservados.
+        </h5>
+    </footer>
+</body>
+
+</html>
