@@ -139,11 +139,8 @@ main {
 /* aside */
 aside {
     min-width: 15vw;
-    height: 100vh;
     padding: 3% 2%;
     background-color: var(--cor-suporte);
-/*     position: fixed;
-    left: 0; */
     overflow-y: auto;
 }
 
