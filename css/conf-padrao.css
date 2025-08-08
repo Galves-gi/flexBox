@@ -106,7 +106,7 @@ header {
     background-color: var(--cor-primaria);
     gap: 1rem;
     padding: 1rem 0;
-/*     position: sticky;
+    /*     position: sticky;
     top: 0; */
 }
 
@@ -139,9 +139,12 @@ main {
 /* aside */
 aside {
     min-width: 15vw;
+    height: 100vh;
     padding: 3% 2%;
     background-color: var(--cor-suporte);
     overflow-y: auto;
+    position: sticky;
+    top: 0;
 }
 
 aside nav {
